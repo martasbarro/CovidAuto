@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CovidAuto</title>
+	<link rel="icon" type="image/png" href="escudo.png"/>
+	<meta charset="utf-8">
+	<style>
+	html{
+		font-family:Lucida Console;
+		color: white;
+		background-color: #575757;
+		margin: 50px 50px 75px 75px;
+	}
+	
+	h1 {
+		text-align: center; 
+		font-size:50px;
+	}
+	
+	.flex-container{
+		display:flex;
+		align-items:nowrap;
+	}
+	
+	td,th	{ 
+	border: 1px solid white;
+	padding: 10px;}
+	
+	thead{background:black;}
+	
+	table{ margin:auto;}
+	
+
+	.Main{
+		grid-area:main;
+		width:2000px;
+		border: 6px solid black;	
+	}
+	
+	.Right{
+		grid-area:right;
+		margin-left:20px;
+	}
+	
+	button,legend { 
+		  color: white;
+		  background-color: black;	  
+	}
+	
+	button{ padding:10px; }
+	
+	footer{
+		text-align:center;
+		font-size:10px;
+		margin:40px;
+	}
+	
+	</style>
+
+</head>
+
+<body>
+	<h1> Bienvenido a CovidAuto Alcobendas</h1>
+	
+	<h4> El área sanitaria a la que pertenece está confinada. 
+	Desde el Ayuntamiento de Alcobendas le invitamos a realizarse la prueba de 
+	antígenos de forma gratuita para evitar la propagación del virus.</h4>
+	
+	<div class="flex-container">
+	
+		<div class="Main">
+		<form action="/my-handling-form-page" method="post">
+			<legend>Por favor rellene sus datos:</legend>
+			<div style="margin:10px;">
+				<p>
+					<label for="name">Nombre:</label>
+					<input type="text" id="name" name="user_name" >
+					
+					<label for="surname">Apellidos:</label>
+					<input type="text" id="name" name="user_name" >
+				</p>	
+				<p>
+					<label for="address">Dirección:</label>
+					<input type="text" id="address" name="user_address" >
+					
+					<label for="ccp">Código Postal:</label>
+					<input type="text" id="ccp" name="user_ccp" >
+				</p>
+
+				<p>
+					<label for="email">Email:</label>
+					<input type="email" id="email" name="drone"  >
+				</p>
+				<p>
+					<label for="phone">Número de telefono:</label>
+					<input type="tel" id="phone" name="drone" >
+				</p>
+				<p>
+					<label>Seleccione una fecha para realizarse el test:</label>
+					<input type="date" min="2021-01-01" max="2021-02-31">
+				</p>
+				<p><center>
+					<label for="contact">Contacto estrecho con algún contagiado:</label>
+					<input type="checkbox" id="contact" name="drone" value="contact" >
+				</center></p>
+				<p style="float:right;"><button type="submit" >Solicitar</button></p>
+			</div>
+		</form>
+		</div>
+		
+		<div class="Right">
+			
+			<p>Le rogamos que si presenta cualesquiera de los siguientes síntomas guarde cuarentena y consulte a su médico:</p>	
+			<ul>
+				<li>Tos seca</li>
+				<li>Fiebre</li>
+				<li>Cansancio</li>
+				<li>Molestias y dolores</li>
+				<li>Dolor de garganta</li>
+				<li>Diarrea</li>
+				<li>Conjuntivitis</li>
+				<li>Pérdida del olfato o gusto</li>
+				<li>Dolor de cabeza</li>
+			</ul>
+			<p>O consulte el protocolo de actuación de la Comunidad de Madrid:</p>
+			<a href="https://www.comunidad.madrid/sites/default/files/doc/sanidad/spub/hoja_informativa_para_casos_covid.pdf">
+			<p>Protocolo</p></a>
+		</div>
+	</div>
+	
+	<p/> En la siguiente tabla encontrará a qué centro acudir dependiendo de su código postal:</p>
+	<p><table>
+		<thead>
+			<tr>
+				<th>Código Postal</th>
+				<th>Centro</th>
+				<th>Dirección</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>28100</td>
+				<td>Centro Médico Valdavia</td>
+				<td>Calle del Marqués de la Valdavia, 43</td>
+			<tr>
+			<tr>
+				<td>28108</td>
+				<td>Centro de Salud Arroyo de la Vega</td>
+				<td>Bulevar de Salvador Allende, 22</td>
+			<tr>
+			<tr>
+				<td>28109</td>
+				<td>Policlínico HM Moraleja</td>
+				<td>Paseo de Alcobendas, 10</td>
+			<tr>
+		<tbody>
+	</table></p>
+	
+	<footer>
+		<p> Ayuntamiento de Alcobendas </p>
+		<p><a href=mailto:covidauto@aytoalcobendas.org>covidauto@aytoalcobendas.org</a></p>
+		<p><img src="http://comunicacion.alcobendas.org/sites/default/files/manual/Logo%20Horz%20Verde.png" width="15%" height="15%"></p>
+	</footer>
+	
+</body>
+</html>
